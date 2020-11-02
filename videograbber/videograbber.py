@@ -1,6 +1,6 @@
 import subprocess
 
-queuefile = '/home/mike/compile/videograbber/videoqueue.txt'
+queuefile = '/home/mike/compile/linux-automation/videograbber/videoqueue.txt'
 outdir = '/Lenny/videoLibrary/Showings'
 
 def popline():
