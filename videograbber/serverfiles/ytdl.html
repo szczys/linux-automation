@@ -2,20 +2,41 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        html {
+            width: 100%;
+            size: 16px;
+        }
+
         body {
+            box-sizing: border-box;
             background-color: black;
             color: #ccc;
+            width: 580px;
+            margin: 0 auto;
 
         }
 
-        h1 { font-size: 3rem; }
+        @media only screen and (max-width: 600px) {
+            html {
+                font-size: 22px;
+            }
+            body {
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
 
         input[type=text],
         select,
         textarea {
             width: 100%;
-            font-size: 2.6rem;
+            font-size: 1rem;
             padding: 4px;
             color: black;
             background-color: #ccc;
@@ -26,19 +47,20 @@
             box-sizing: border-box;
             resize: vertical;
         }
+
         input {
-            font-size: 2rem;
+            font-size: 1.25rem;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Download video to Showings</h1>
+    <h1>youtube-dl to Showings</h1>
 
     <form action="/confirmurl.php" method="POST">
-        <input type="text" name="url"><br>
-        <input type="submit">
+        <input type="text" name="url" placeholder="Media page URL"><br>
+        <input type="submit" value="Download">
     </form>
 
 </body>
