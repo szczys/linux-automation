@@ -4,7 +4,9 @@ Plug 'gerardbm/vim-atomic'
 Plug 'martinsione/darkplus.nvim'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
+Plug 'tpope/vim-sleuth'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 if has("termguicolors")
@@ -32,6 +34,7 @@ nmap <C-n> :NERDTreeToggle<CR>
 nmap <C-l> <C-w>l
 nmap <C-h> <C-w>h
 
+set tabstop=4
 set list
 set listchars=tab:▷▷⋮
 
