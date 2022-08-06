@@ -31,8 +31,8 @@ vnoremap kj <Esc>
 
 " remap nerdtree toggle
 nmap <C-n> :NERDTreeToggle<CR>
-nmap <C-l> <C-w>l
-nmap <C-h> <C-w>h
+" nmap <C-l> <C-w>l
+" nmap <C-h> <C-w>h
 
 set tabstop=4
 set list
