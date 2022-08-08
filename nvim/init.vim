@@ -7,6 +7,9 @@ Plug 'roxma/nvim-yarp'
 Plug 'tpope/vim-sleuth'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'editorconfig/editorconfig-vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'KarimElghamry/vim-auto-comment'
+Plug 'vim-scripts/ZoomWin'
 call plug#end()
 
 if has("termguicolors")
@@ -31,8 +34,12 @@ vnoremap kj <Esc>
 
 " remap nerdtree toggle
 nmap <C-n> :NERDTreeToggle<CR>
-" nmap <C-l> <C-w>l
-" nmap <C-h> <C-w>h
+
+" remap pane navigation
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 set tabstop=4
 set list
