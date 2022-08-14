@@ -10,7 +10,24 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'KarimElghamry/vim-auto-comment'
 Plug 'vim-scripts/ZoomWin'
+Plug 'sickill/vim-monokai'
+Plug 'bfrg/vim-cpp-modern'
+Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'
+Plug 'jacoborus/tender.vim'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
 call plug#end()
+
+" vim-airlines
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+" Tmuxline
+let g:tmuxline_preset = 'full'
 
 if has("termguicolors")
 	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -43,5 +60,9 @@ map <C-l> <C-W>l
 
 set tabstop=4
 set list
-set listchars=tab:▷▷⋮
+"set listchars=tab:▷▷⋮
+set listchars=tab:\ \ ┊,trail:●,extends:…,precedes:…
+
+" GitGutter color fix
+highlight! link SignColumn LineNr
 
