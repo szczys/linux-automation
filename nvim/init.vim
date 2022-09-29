@@ -24,6 +24,8 @@ Plug 'SidOfc/mkdx'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'babaybus/DoxygenToolkit.vim'
+Plug 'neoclide/coc.nvim'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 let g:python3_host_prog = '/usr/bin/python3'
