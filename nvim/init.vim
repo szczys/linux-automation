@@ -19,7 +19,14 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
+Plug 'tpope/vim-surround'
+Plug 'SidOfc/mkdx'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'babaybus/DoxygenToolkit.vim'
 call plug#end()
+
+let g:python3_host_prog = '/usr/bin/python3'
 
 " Additional install for YouCompleteMe:
 " cd ~/.local/share/nvim/plugged/YouCompleteMe
@@ -41,6 +48,10 @@ endif
 
 syntax enable
 
+" allow mouse scrollwheel
+set mouse=n
+
+" set theme
 let g:atomic_italic = 0
 colorscheme atomic
 AtomicDarkBlueHard
