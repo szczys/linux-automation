@@ -30,6 +30,10 @@ call plug#end()
 
 let g:python3_host_prog = '/usr/bin/python3'
 
+" Case in-sensitive search
+set ignorecase
+set smartcase
+
 " Additional install for YouCompleteMe:
 " cd ~/.local/share/nvim/plugged/YouCompleteMe
 " python3 install.py --all
