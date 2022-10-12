@@ -34,6 +34,9 @@ let g:python3_host_prog = '/usr/bin/python3'
 set ignorecase
 set smartcase
 
+" CTRL-R in visual mode to search/replace selected
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 " Additional install for YouCompleteMe:
 " cd ~/.local/share/nvim/plugged/YouCompleteMe
 " python3 install.py --all
