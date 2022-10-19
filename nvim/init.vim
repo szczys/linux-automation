@@ -34,6 +34,10 @@ let g:python3_host_prog = '/usr/bin/python3'
 set ignorecase
 set smartcase
 
+" Set linewrapping
+set wrap
+set textwidth=80
+
 " CTRL-R in visual mode to search/replace selected
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
