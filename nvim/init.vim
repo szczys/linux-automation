@@ -83,9 +83,8 @@ AtomicDarkBlueHard
 :set number
 :set colorcolumn=80
 
-" esc in insert & vsual mode
+" esc in insert
 inoremap kj <Esc>
-vnoremap kj <Esc>
 
 " remap nerdtree toggle
 nmap <C-n> :NERDTreeToggle<CR>
