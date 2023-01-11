@@ -38,6 +38,9 @@ set smartcase
 set wrap
 set textwidth=80
 
+" Use system clipboard by default
+set clipboard=unnamedplus
+
 " CTRL-R in visual mode to search/replace selected
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
