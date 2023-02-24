@@ -26,6 +26,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'babaybus/DoxygenToolkit.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
+Plug 'whiteinge/diffconflicts'
 call plug#end()
 
 let g:python3_host_prog = '/usr/bin/python3'
