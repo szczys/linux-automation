@@ -6,7 +6,7 @@ Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'tpope/vim-sleuth'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-Plug 'editorconfig/editorconfig-vim'
+" Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'KarimElghamry/vim-auto-comment'
 Plug 'vim-scripts/ZoomWin'
@@ -27,17 +27,23 @@ Plug 'babaybus/DoxygenToolkit.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'whiteinge/diffconflicts'
+Plug 'vim-autoformat/vim-autoformat'
+Plug 'previm/previm'
 call plug#end()
 
 let g:python3_host_prog = '/usr/bin/python3'
+
+" open by FireFox
+let g:previm_open_cmd = 'open -a Firefox'
 
 " Case in-sensitive search
 set ignorecase
 set smartcase
 
-" Set linewrapping
-set wrap
-set textwidth=80
+" Show line numbers
+set number
+" Color the colum to the right of the limit
+set colorcolumn=+1
 
 " Use system clipboard by default
 set clipboard=unnamedplus
@@ -86,10 +92,6 @@ set mouse=n
 let g:atomic_italic = 0
 colorscheme atomic
 AtomicDarkBlueHard
-
-" Show line numbers and column 80
-:set number
-:set colorcolumn=80
 
 " esc in insert
 inoremap kj <Esc>
