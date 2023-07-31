@@ -49,3 +49,8 @@ OTA
 #syncronously
 asyncronously/!
 PlatformIO
+OpenAPI
+menuconfig
+Kasm
+RTOS
+VScode
