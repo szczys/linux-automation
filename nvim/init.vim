@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'preservim/nerdtree'
+
 Plug 'gerardbm/vim-atomic'
 Plug 'martinsione/darkplus.nvim'
 Plug 'ncm2/ncm2'
@@ -93,6 +94,8 @@ set mouse=n
 let g:atomic_italic = 0
 colorscheme atomic
 AtomicDarkBlueHard
+hi CocMenuSel ctermbg=235 guibg=#2c2c2c
+hi ColorColumn ctermbg=235 guibg=#2c2c2c
 
 " esc in insert
 inoremap kj <Esc>
