@@ -54,3 +54,8 @@ menuconfig
 Kasm
 RTOS
 VScode
+cJSON
+CBOR
+zCBOR
+submodule
+timestamp
