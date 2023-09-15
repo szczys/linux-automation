@@ -29,6 +29,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'whiteinge/diffconflicts'
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'previm/previm'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 let g:python3_host_prog = '/usr/bin/python3'
@@ -105,7 +106,7 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-set tabstop=4
+"set tabstop=4
 set list
 "set listchars=tab:▷▷⋮
 set listchars=tab:\ \ ┊,trail:●,extends:…,precedes:…
