@@ -43,16 +43,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-require("lspconfig").bashls.setup {}
-require("lspconfig").clangd.setup {}
-require("lspconfig").cmake.setup {}
-require("lspconfig").cssls.setup {}
-require("lspconfig").dockerls.setup {}
-require("lspconfig").jsonls.setup {}
-require("lspconfig").lua_ls.setup {}
-require("lspconfig").marksman.setup {}
-require("lspconfig").pyright.setup {}
-require("lspconfig").yamlls.setup {}
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+require("lspconfig").bashls.setup { capabilities = capabilities }
+require("lspconfig").clangd.setup { capabilities = capabilities }
+require("lspconfig").cmake.setup { capabilities = capabilities }
+require("lspconfig").cssls.setup { capabilities = capabilities }
+require("lspconfig").dockerls.setup { capabilities = capabilities }
+require("lspconfig").jsonls.setup { capabilities = capabilities }
+require("lspconfig").lua_ls.setup { capabilities = capabilities }
+require("lspconfig").marksman.setup { capabilities = capabilities }
+require("lspconfig").pyright.setup { capabilities = capabilities }
+require("lspconfig").yamlls.setup { capabilities = capabilities }
 
 -- After setting up mason-lspconfig you may set up servers via lspconfig
 -- require("lspconfig").lua_ls.setup {}
