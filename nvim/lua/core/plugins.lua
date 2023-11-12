@@ -24,6 +24,9 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'L3MON4D3/LuaSnip'
   use 'airblade/vim-gitgutter'
+  use 'edkolev/tmuxline.vim'
+  use 'rose-pine/neovim'
+  use 'tomasiser/vim-code-dark'
 
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 

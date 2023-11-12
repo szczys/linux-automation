@@ -34,4 +34,3 @@ vim.opt.colorcolumn = "+1"
 
 -- Use system clipboard by default
 vim.opt.clipboard = "unnamedplus"
- 
