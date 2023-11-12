@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
   use 'rose-pine/neovim'
   use 'tomasiser/vim-code-dark'
   use 'preservim/nerdcommenter'
+  use 'whiteinge/diffconflicts'
 
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
