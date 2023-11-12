@@ -30,6 +30,11 @@ return require('packer').startup(function(use)
 
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
