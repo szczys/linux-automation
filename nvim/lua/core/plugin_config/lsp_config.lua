@@ -52,7 +52,16 @@ require("lspconfig").cmake.setup { capabilities = capabilities }
 require("lspconfig").cssls.setup { capabilities = capabilities }
 require("lspconfig").dockerls.setup { capabilities = capabilities }
 require("lspconfig").jsonls.setup { capabilities = capabilities }
-require("lspconfig").lua_ls.setup { capabilities = capabilities }
+require("lspconfig").lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' },
+      }
+    }
+  },
+  capabilities = capabilities
+}
 require("lspconfig").marksman.setup { capabilities = capabilities }
 require("lspconfig").pyright.setup { capabilities = capabilities }
 require("lspconfig").yamlls.setup { capabilities = capabilities }
