@@ -28,6 +28,7 @@ vim.keymap.set('n', '<C-l>', '<C-W>l', options)
 
 -- show line numbers
 vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- Color the colum to the right of the limit
 vim.opt.colorcolumn = "+1"
