@@ -33,5 +33,22 @@ vim.opt.relativenumber = true
 -- Color the colum to the right of the limit
 vim.opt.colorcolumn = "+1"
 
--- Use system clipboard by default
-vim.opt.clipboard = "unnamedplus"
+-- Paste without overwriting register
+vim.keymap.set("v", "p", '"_dP', { desc = "Paste without overwriting register"})
+
+-- Copy text to " register
+vim.keymap.set("n", "<leader>y", "\"+y", { desc = "Yank into \" register" })
+vim.keymap.set("v", "<leader>y", "\"+y", { desc = "Yank into \" register" })
+vim.keymap.set("n", "<leader>Y", "\"+Y", { desc = "Yank into \" register" })
+
+-- Delete text to " register
+vim.keymap.set("n", "<leader>d", "\"_d", { desc = "Delete into \" register" })
+vim.keymap.set("v", "<leader>d", "\"_d", { desc = "Delete into \" register" })
+
+-- Keep window centered when going up/down
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-f>", "<C-f>zz")
+vim.keymap.set("n", "<C-b>", "<C-b>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
