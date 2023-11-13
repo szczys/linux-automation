@@ -49,6 +49,16 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use {
+    "AckslD/nvim-neoclip.lua",
+    requires = {
+      {'nvim-telescope/telescope.nvim'},
+    },
+    config = function()
+      require('neoclip').setup()
+    end,
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
