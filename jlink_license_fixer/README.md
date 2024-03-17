@@ -7,5 +7,5 @@ script via daily cron job will prevent this pop-up from being shown in the
 future.
 
 ```
-
+5 0 * * * /usr/bin/python /home/mike/compile/linux-automation/jlink_license_fixer/jlink_license_fixer.py
 ```
