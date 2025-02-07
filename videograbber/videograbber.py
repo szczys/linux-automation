@@ -19,5 +19,10 @@ def popline():
 if __name__ == "__main__":
     videourl = popline()
     if videourl != None:
-        cmd = f'cd {outdir} && /usr/bin/yt-dlp --embed-metadata --ffmpeg-location /home/mike/bin/ffmpeg --remux-video mp4 -S acodec:aac {videourl}'
+        cmd = (f'cd {outdir} &&                                 \
+                /usr/bin/yt-dlp                                 \
+                --embed-metadata                                \
+                --ffmpeg-location /home/mike/bin/ffmpeg         \
+                -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4    \
+                {videourl}')
         subprocess.run(cmd, shell=True)
