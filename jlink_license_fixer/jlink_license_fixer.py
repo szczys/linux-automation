@@ -5,7 +5,7 @@ import os.path
 #   <Software>
 #     <SEGGER LogFileJLink="" LogFileJLink_SEGGERRegType="SYS_REG_TYPE_SZ">
 #       <J-Link StartMinimized="0x00000001" StartMinimized_SEGGERRegType="SYS_REG_TYPE_DWORD" StayOnTop="0x00000001" StayOnTop_SEGGERRegType="SYS_REG_TYPE_DWORD" LogIsHalted="0x00000001" LogIsHalted_SEGGERRegType="SYS_REG_TYPE_DWORD" LogInternal="0x00000001" LogInternal_SEGGERRegType="SYS_REG_TYPE_DWORD" OverrideConfigFile="0x00000000" OverrideConfigFile_SEGGERRegType="SYS_REG_TYPE_DWORD" OverrideLogFile="0x00000000" OverrideLogFile_SEGGERRegType="SYS_REG_TYPE_DWORD" ConfigFile="" ConfigFile_SEGGERRegType="SYS_REG_TYPE_SZ" LogFile="" LogFile_SEGGERRegType="SYS_REG_TYPE_SZ" NotifyOnSecurityUpdate="0x00000000" NotifyOnSecurityUpdate_SEGGERRegType="SYS_REG_TYPE_DWORD" UpdateNotificationMode="0x00000000" UpdateNotificationMode_SEGGERRegType="SYS_REG_TYPE_DWORD">
-#         <DontShowAgain LicenseLPCLink2_DontShowAgainToday="0x07E90207" LicenseLPCLink2_DontShowAgainToday_SEGGERRegType="SYS_REG_TYPE_DWORD"/>
+#         <DontShowAgain LicenseLPCLink2_DontShowAgainToday="0x07E9040F" LicenseLPCLink2_DontShowAgainToday_SEGGERRegType="SYS_REG_TYPE_DWORD" LicenseMCULink_DontShowAgainToday="0x00000000" LicenseMCULink_DontShowAgainToday_SEGGERRegType="SYS_REG_TYPE_DWORD"/>
 #       </J-Link>
 #     </SEGGER>
 #   </Software>
@@ -56,5 +56,5 @@ def patch_for_debugger(kind):
             # fh.write(line[:-1]+ "\r\n")
             fh.write(line)
 
-for kind in ["LPCLink2"]:
+for kind in ["LPCLink2", "MCULink"]:
     patch_for_debugger(kind)
