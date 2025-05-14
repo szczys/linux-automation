@@ -1,6 +1,6 @@
 import subprocess
 
-queuefile = '/home/mike/compile/linux-automation/videograbber/videoqueue.txt'
+queuefile = '/compile/compile/linux-automation/videograbber/videoqueue.txt'
 outdir = '/Lenny/videoLibrary/Showings'
 
 def popline():
@@ -22,7 +22,7 @@ if __name__ == "__main__":
         cmd = (f'cd {outdir} &&                                 \
                 /usr/bin/yt-dlp                                 \
                 --embed-metadata                                \
-                --ffmpeg-location /home/mike/bin/ffmpeg         \
+                --ffmpeg-location /usr/bin/ffmpeg               \
                 -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4    \
                 {videourl}')
         subprocess.run(cmd, shell=True)

@@ -1,0 +1,11 @@
+[Unit]
+Description=Video Grabber
+
+[Service]
+ExecStart=/usr/bin/videograbber.sh
+User=mythtv
+Group=mythtv
+restart=always
+
+[Install]
+WantedBy=multi-user.target

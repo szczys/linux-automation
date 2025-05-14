@@ -2,12 +2,26 @@
 
 This program provides a simple webpage on the internal network. Any URL for video will be automatically downloaded to 
 
-**Important**
+## Prerequisites
 
-* The location of videoqueue.txt must be specified in serverfiles/confirmurl.php so that webpage can write to file
-* Location of python3 and of videograbber.py must be set in the crontab string
-* Location of youtube-dl and destination of downloaded files must be set in videograbber.py
+- Setup LAMP (assume /srv/http/ for served files)
+- Install `yt-dlp`
+- Set the location of the binary, and chose the output directory in `videograbber.sh`
+- The linux fifo used must match in `videograbber.sh` and `serverfiles/confirmurl.php`
 
-## Crontab entry example:
-* * * * * /usr/bin/python3 /home/mike/compile/linux-automation/videograbber/videograbber.py > /tmp/ytdl.log 2>&1
+## Installation
 
+```
+sudo ln -s $(pwd)/videograbber.sh /usr/bin/.
+sudo cp videograbber.service /etc/systemd/system/.
+sudo systemctl enable videograbber
+sudo systemctl start videograbber
+sudo systemctl status videograbber
+sudo ln -s $(pwd)/ytdl.html /srv/http/.
+sudo ln -s $(pwd)/confirmurl.php /srv/http/.
+```
+
+## Usage
+
+1. Load `http:/servername/ytdl.html`
+2. Paste link to desired video
