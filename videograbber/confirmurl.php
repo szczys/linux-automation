@@ -1,16 +1,21 @@
 <?php
+  $q = array();
   if ($_POST['url']) {
     $url=$_POST['url'];
 
+    $q['url'] = $url;
     $return = file_put_contents("/Lenny/videoLibrary/ytdl_queue", "$url\n");
   } else {
     $return = false;
   }
 
   if ($return == false) {
-    echo "Error, was not able to write to queue file for some reason";
+    $q['status'] = "Error, unable to queue for download";
   } else {
-    echo "Your video will be downloaded.!!!!";
+    $q['status'] = "Successfully queued for download.";
   }
-  echo '<br><br><a href="/ytdl.html"><-- Back to form</a>'
+
+  $q_str = http_build_query($q);
+  header("Location: http://krusty/ytdl.html?$q_str");
+  die();
 ?>
