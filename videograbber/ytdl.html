@@ -54,20 +54,10 @@
     </style>
     <script>
       var params = new URLSearchParams(window.location.search);
-      var alert_str = "";
 
-      var status = params.get('status');
-      if (status !== null) {
-        alert_str += status;
-      }
-
-      var url = params.get('url');
-      if (url !== null) {
-        alert_str += "\n\n" + url;
-      }
-
-      if (alert_str != "") {
-        alert(alert_str);
+      if (params.size > 0) {
+        var alert_str = params.get('status') + "\n\n" + params.get('url');
+        document.addEventListener("DOMContentLoaded", function(){ alert(alert_str) });
       }
     </script>
 </head>
