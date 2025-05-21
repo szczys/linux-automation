@@ -19,6 +19,7 @@ sudo systemctl start videograbber
 sudo systemctl status videograbber
 sudo ln -s $(pwd)/ytdl.html /srv/http/.
 sudo ln -s $(pwd)/confirmurl.php /srv/http/.
+sudo ln -s $(pwd)/icons8-krusty-the-clown-doodle-120.png /srv/http/.
 ```
 
 ## Usage
