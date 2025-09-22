@@ -11,7 +11,7 @@ fi
 
 while true
 do
-  if read line <"$ytdl_fifo"; then
+  if read line; then
     echo "Processing: ${line}"
     ${ytdl_binary}                                  \
     --embed-metadata                                \
@@ -20,4 +20,4 @@ do
     --paths ${outdir}                               \
     "${line}" >> /tmp/ytdl.log 2>&1
   fi
-done
+done <"$ytdl_fifo"
