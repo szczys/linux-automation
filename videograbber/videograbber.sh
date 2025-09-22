@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-ytdl_binary="/usr/bin/yt-dlp"
+ytdl_binary="/usr/local/bin/yt-dlp"
 ytdl_fifo="/Lenny/videoLibrary/ytdl_queue"
 outdir="/Lenny/videoLibrary/Showings"
 
