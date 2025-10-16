@@ -22,8 +22,13 @@ def patch_for_debugger(kind):
 
     target_line = lines[TARGET_LINE]
     print(target_line)
-    before, rest = target_line.split(splitter)
-    prev_date, after = rest.split('"', 1)
+
+    try:
+        before, rest = target_line.split(splitter)
+        prev_date, after = rest.split('"', 1)
+    except Exception as ex:
+        print(ex)
+        return
 
     today = date.today()
     def hx(i, n):
