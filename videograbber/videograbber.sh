@@ -12,7 +12,13 @@ fi
 while true
 do
   if read line; then
-    echo "Processing: ${line}"
+    echo "Processing: ${line}" >> /tmp/ytdl.log
+
+    if [[ "${line}" =~ .*\?list.* ]]; then
+    #if [[ "${line}" =~ .* ]]; then
+      echo "Warning: downloading lists is prohibited; stripping list member" >> /tmp/ytdl.log
+      line=$(echo "${line}" | sed 's/\?list=.*//')
+    fi
     ${ytdl_binary}                                  \
     --embed-metadata                                \
     --ffmpeg-location /usr/bin/ffmpeg               \
