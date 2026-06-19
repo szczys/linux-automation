@@ -16,6 +16,8 @@
   }
 
   $q_str = http_build_query($q);
-  header("Location: http://krusty/ytdl.html?$q_str");
+
+  $host = $_SERVER['HTTP_HOST'];
+  header("Location: http://{$host}/ytdl.html?{$q_str}");
   die();
 ?>
