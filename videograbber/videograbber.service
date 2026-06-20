@@ -5,7 +5,7 @@ Description=Video Grabber
 ExecStart=/usr/bin/videograbber.sh
 User=mythtv
 Group=mythtv
-restart=always
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
