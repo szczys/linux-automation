@@ -9,21 +9,18 @@ if [ ! -p "$ytdl_fifo" ]; then
   mkfifo --mode=0777 $ytdl_fifo
 fi
 
-while true
-do
-  if read line; then
-    echo "Processing: ${line}" >> /tmp/ytdl.log
+while read line; do
+  echo "Processing: ${line}" >> /tmp/ytdl.log
 
-    if [[ "${line}" =~ .*\?list.* ]]; then
-    #if [[ "${line}" =~ .* ]]; then
-      echo "Warning: downloading lists is prohibited; stripping list member" >> /tmp/ytdl.log
-      line=$(echo "${line}" | sed 's/\?list=.*//')
-    fi
-    ${ytdl_binary}                                  \
-    --embed-metadata                                \
-    --ffmpeg-location /usr/bin/ffmpeg               \
-    -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4    \
-    --paths ${outdir}                               \
-    "${line}" >> /tmp/ytdl.log 2>&1
+  if [[ "${line}" =~ .*\?list.* ]]; then
+  #if [[ "${line}" =~ .* ]]; then
+    echo "Warning: downloading lists is prohibited; stripping list member" >> /tmp/ytdl.log
+    line=$(echo "${line}" | sed 's/\?list=.*//')
   fi
+  ${ytdl_binary}                                  \
+  --embed-metadata                                \
+  --ffmpeg-location /usr/bin/ffmpeg               \
+  -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4    \
+  --paths ${outdir}                               \
+  "${line}" >> /tmp/ytdl.log 2>&1
 done <"$ytdl_fifo"
